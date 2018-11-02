@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Paper from 'material-ui/Paper'
-import IconButton from 'material-ui/IconButton'
-import RaisedButton from 'material-ui/RaisedButton'
+import Paper from '@material-ui/core/Paper'
+import IconButton from '@material-ui/core/IconButton'
+import RaisedButton from '@material-ui/core/RaisedButton'
 import {ArrayComponent} from 'simple-react-form'
 
 const styles = {

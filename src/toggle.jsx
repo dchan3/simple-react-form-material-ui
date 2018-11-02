@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Toggle from 'material-ui/Toggle'
+import Toggle from '@material-ui/core/Toggle'
 import {FieldType, registerType} from 'simple-react-form'
 import styles from './styles'
 

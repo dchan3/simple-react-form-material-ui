@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import LinearProgress from 'material-ui/LinearProgress'
-import CircularProgress from 'material-ui/CircularProgress'
-import * as Colors from 'material-ui/styles/colors'
+import LinearProgress from '@material-ui/core/LinearProgress'
+import CircularProgress from '@material-ui/core/CircularProgress'
+import * as Colors from '@material-ui/core/styles/colors'
 
 const styles = {
   image: {

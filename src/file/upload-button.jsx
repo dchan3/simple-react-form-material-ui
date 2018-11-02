@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
-import RaisedButton from 'material-ui/RaisedButton'
+import RaisedButton from '@material-ui/core/RaisedButton'
 import _ from 'underscore'
 
 const propTypes = {

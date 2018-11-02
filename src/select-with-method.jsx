@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import AutoComplete from 'material-ui/AutoComplete'
-import MenuItem from 'material-ui/MenuItem'
+import AutoComplete from '@material-ui/core/AutoComplete'
+import MenuItem from '@material-ui/core/MenuItem'
 import _ from 'underscore'
 import {FieldType, registerType} from 'simple-react-form'
-import Chip from 'material-ui/Chip'
-import * as Colors from 'material-ui/styles/colors'
-import Avatar from 'material-ui/Avatar'
-import FontIcon from 'material-ui/FontIcon'
+import Chip from '@material-ui/core/Chip'
+import * as Colors from '@material-ui/core/styles/colors'
+import Avatar from '@material-ui/core/Avatar'
+import FontIcon from '@material-ui/core/FontIcon'
 
 const propTypes = {
   ...FieldType.propTypes,

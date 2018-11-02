@@ -1,4 +1,4 @@
-import * as Colors from 'material-ui/styles/colors'
+import * as Colors from '@material-ui/core/styles/colors'
 
 export default {
   label: {

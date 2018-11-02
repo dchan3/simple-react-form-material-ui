@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Checkbox from 'material-ui/Checkbox'
-import * as Colors from 'material-ui/styles/colors'
+import Checkbox from '@material-ui/core/Checkbox'
+import * as Colors from '@material-ui/core/styles/colors'
 import {FieldType, registerType} from 'simple-react-form'
 
 const propTypes = {

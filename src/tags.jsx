@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TextField from 'material-ui/TextField'
+import TextField from '@material-ui/core/TextField'
 import {FieldType, registerType} from 'simple-react-form'
 import styles from './styles'
 import _ from 'underscore'
