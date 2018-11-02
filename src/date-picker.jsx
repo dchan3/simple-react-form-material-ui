@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import DatePicker from '@material-ui/core/DatePicker'
-import {FieldType, registerType} from 'simple-react-form'
+import {FieldType} from 'simple-react-form'
 
 const propTypes = {
   ...FieldType.propTypes
@@ -38,8 +38,3 @@ export default class DatePickerComponent extends Component {
 
 DatePickerComponent.propTypes = propTypes
 DatePickerComponent.defaultProps = defaultProps
-
-registerType({
-  type: 'date-picker',
-  component: DatePickerComponent
-})

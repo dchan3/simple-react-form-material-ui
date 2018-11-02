@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Toggle from '@material-ui/core/Toggle'
-import {FieldType, registerType} from 'simple-react-form'
+import {FieldType} from 'simple-react-form'
 import styles from './styles'
 
 const propTypes = {
@@ -31,8 +31,3 @@ export default class ToggleComponent extends Component {
 
 ToggleComponent.propTypes = propTypes
 ToggleComponent.defaultProps = defaultProps
-
-registerType({
-  type: 'toggle',
-  component: ToggleComponent
-})
