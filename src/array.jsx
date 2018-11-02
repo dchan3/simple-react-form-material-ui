@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Paper from 'material-ui/Paper'
 import IconButton from 'material-ui/IconButton'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -14,10 +15,10 @@ const styles = {
 
 const propTypes = {
   ...ArrayComponent.propTypes,
-  parentClassName: React.PropTypes.string,
-  childrenClassName: React.PropTypes.string,
-  useSmallSpace: React.PropTypes.bool,
-  smallRemoveButtonTooltipPosition: React.PropTypes.string
+  parentClassName: PropTypes.string,
+  childrenClassName: PropTypes.string,
+  useSmallSpace: PropTypes.bool,
+  smallRemoveButtonTooltipPosition: PropTypes.string
 }
 
 const defaultProps = {

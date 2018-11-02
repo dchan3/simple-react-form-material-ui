@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Checkbox from 'material-ui/Checkbox'
 import * as Colors from 'material-ui/styles/colors'
 import {FieldType, registerType} from 'simple-react-form'
@@ -10,14 +11,14 @@ const propTypes = {
   /**
    * The options for the checkbox.
    */
-  options: React.PropTypes.arrayOf(React.PropTypes.shape({
-    label: React.PropTypes.string.isRequired,
-    disabled: React.PropTypes.bool,
-    value: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number
+  options: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    disabled: PropTypes.bool,
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
     ]).isRequired,
-    description: React.PropTypes.string
+    description: PropTypes.string
   })).isRequired
 }
 
@@ -25,7 +26,7 @@ const defaultProps = {
 
 }
 
-export default class MultipleCheckboxComponent extends React.Component {
+export default class MultipleCheckboxComponent extends Component {
 
   onCheck (value, currentVal) {
     var newVal = []

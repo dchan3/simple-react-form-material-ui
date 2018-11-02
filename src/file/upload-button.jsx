@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 import RaisedButton from 'material-ui/RaisedButton'
 import _ from 'underscore'
@@ -18,7 +19,7 @@ const defaultProps = {
   passBase64: false
 }
 
-export default class Component extends React.Component {
+export default class UploadButton extends Component {
 
   openFileDialog () {
     var fileInputDom = ReactDOM.findDOMNode(this.refs.input)
@@ -62,5 +63,5 @@ export default class Component extends React.Component {
 
 }
 
-Component.propTypes = propTypes
-Component.defaultProps = defaultProps
+UploadButton.propTypes = propTypes
+UploadButton.defaultProps = defaultProps

@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import TextField from 'material-ui/TextField'
 import {FieldType, registerType} from 'simple-react-form'
 
 const propTypes = {
   ...FieldType.propTypes,
-  fieldType: React.PropTypes.string
+  fieldType: PropTypes.string
 }
 
 const defaultProps = {
 
 }
 
-export default class TextFieldComponent extends React.Component {
+export default class TextFieldComponent extends Component {
 
   constructor (props) {
     super(props)

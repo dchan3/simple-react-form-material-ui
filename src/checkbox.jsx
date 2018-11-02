@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Checkbox from 'material-ui/Checkbox'
 import * as Colors from 'material-ui/styles/colors'
 import {FieldType, registerType} from 'simple-react-form'
@@ -11,7 +12,7 @@ const defaultProps = {
 
 }
 
-export default class CheckboxComponent extends React.Component {
+export default class CheckboxComponent extends Component {
 
   render () {
     return (

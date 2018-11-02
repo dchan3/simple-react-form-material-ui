@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import TextField from 'material-ui/TextField'
 import {FieldType, registerType} from 'simple-react-form'
 import styles from './styles'
@@ -12,7 +12,7 @@ const defaultProps = {
 
 }
 
-export default class StringArrayComponent extends React.Component {
+export default class StringArrayComponent extends Component {
 
   constructor (props) {
     super(props)

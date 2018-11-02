@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import TextField from 'material-ui/TextField'
+import PropTypes from 'prop-types'
 import {FieldType, registerType} from 'simple-react-form'
 
 const propTypes = {
-  changeOnKeyDown: React.PropTypes.bool,
+  changeOnKeyDown: PropTypes.bool,
   ...FieldType.propTypes
 }
 
@@ -11,7 +12,7 @@ const defaultProps = {
   changeOnKeyDown: false
 }
 
-export default class TextareaComponent extends React.Component {
+export default class TextareaComponent extends Component {
   constructor (props) {
     super(props)
     this.state = { value: props.value }

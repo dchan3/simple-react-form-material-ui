@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Toggle from 'material-ui/Toggle'
 import {FieldType, registerType} from 'simple-react-form'
 import styles from './styles'
@@ -11,7 +11,7 @@ const defaultProps = {
 
 }
 
-export default class ToggleComponent extends React.Component {
+export default class ToggleComponent extends Component {
 
   render () {
     return (
