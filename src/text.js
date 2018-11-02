@@ -58,9 +58,9 @@ export default class TextFieldComponent extends Component {
         fullWidth
         value={typeof this.props.value !== 'undefined' ? this.props.value : ''}
         type={fieldType}
-        floatingLabelText={this.props.useHint ? null : this.props.label}
-        hintText={this.props.useHint ? this.props.label : null}
-        errorText={this.props.errorMessage}
+        floatinglabeltext={this.props.useHint ? null : this.props.label}
+        hinttext={this.props.useHint ? this.props.label : null}
+        errortext={this.props.errorMessage}
         disabled={this.props.disabled}
         onChange={this.onChange.bind(this)}
         onKeyDown={this.onKeyDown.bind(this)}

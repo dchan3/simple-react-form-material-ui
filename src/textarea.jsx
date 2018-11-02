@@ -46,11 +46,11 @@ export default class TextareaComponent extends Component {
         <TextField
             ref='input'
             fullWidth={true}
-            multiLine={true}
+            multiline={true}
             value={this.state.value || ''}
-            floatingLabelText={this.props.useHint ? null : this.props.label}
-            hintText={this.props.useHint ? this.props.label : null}
-            errorText={this.props.errorMessage}
+            floatinglabeltext={this.props.useHint ? null : this.props.label}
+            hinttext={this.props.useHint ? this.props.label : null}
+            errortext={this.props.errorMessage}
             disabled={this.props.disabled}
             onChange={this.onChange.bind(this)}
             onKeyDown={this.onKeyDown.bind(this)}
