@@ -14,7 +14,7 @@ const propTypes = {
   /**
    * The options for the select input. Each item must have label and value.
    */
-  options: PropTypes.arrayOf(React.PropTypes.shape({
+  options: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string.isRequired,
     value: PropTypes.oneOfType([
       PropTypes.string,
