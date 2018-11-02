@@ -1,31 +1,28 @@
 {
   "name": "simple-react-form-material-ui",
-  "version": "1.7.13",
+  "version": "2.0.0",
   "license": "MIT",
-  "author": "Nicolás López <nicolaslopezj@me.com>",
+  "author": "Derek Chan <dchan3@hawaii.edu>",
   "description": "Material UI components for simple react form",
   "main": "./lib",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicolaslopezj/simple-react-form/tree/master/material-ui"
+    "url": "https://github.com/dchan3/simple-react-form-material-ui"
   },
   "keywords": [
     "react-component"
   ],
   "dependencies": {
-    "@babel/preset-env": "^7.1.0",
     "acorn": "^6.0.2",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@material-ui/core": "^3.3.2",
     "babel-eslint": "^7.1.1",
     "babel-polyfill": "^6.5.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.5.0",
-    "babel-preset-stage-2": "^6.5.0",
     "brfs": "^1.4.3",
     "browserify": "^13.0.0",
     "budo": "^11.5.0",
