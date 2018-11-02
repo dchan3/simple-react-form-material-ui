@@ -55,8 +55,8 @@ export default class StringArrayComponent extends Component {
           ref='input'
           fullWidth
           value={this.state.value}
-          floatingLabelText={this.props.useHint ? null : this.props.label}
-          hintText={this.props.useHint ? this.props.label : null}
+          label={this.props.useHint ? null : this.props.label}
+          placeholder={this.props.useHint ? this.props.label : null}
           errorText={this.props.errorMessage}
           disabled={this.props.disabled}
           onChange={(event) => this.setState({ value: event.target.value })}

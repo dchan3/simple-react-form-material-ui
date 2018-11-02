@@ -311,8 +311,8 @@ export default class SelectWithMethodComponent extends React.Component {
           dataSource={this.state.dataSource}
           filter={AutoComplete.noFilter}
           onUpdateInput={this.onUpdateText.bind(this)}
-          floatingLabelText={this.props.useHint ? null : this.props.label}
-          hintText={this.props.useHint ? this.props.label : null}
+          label={this.props.useHint ? null : this.props.label}
+          placeholder={this.props.useHint ? this.props.label : null}
           onNewRequest={this.onItemSelected.bind(this)}
           errorText={this.props.errorMessage}
           onFocus={this.onFocus.bind(this)}

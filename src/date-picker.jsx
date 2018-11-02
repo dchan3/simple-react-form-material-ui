@@ -25,8 +25,8 @@ export default class DatePickerComponent extends Component {
         ref='input'
         fullWidth
         value={this.props.value}
-        floatingLabelText={this.props.useHint ? null : this.props.label}
-        hintText={this.props.useHint ? this.props.label : null}
+        label={this.props.useHint ? null : this.props.label}
+        placeholder={this.props.useHint ? this.props.label : null}
         errorText={this.props.errorMessage}
         disabled={this.props.disabled}
         onChange={(_, date) => this.props.onChange(date)}

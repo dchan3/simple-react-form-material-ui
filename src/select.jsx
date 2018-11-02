@@ -64,7 +64,7 @@ export default class SelectComponent extends React.Component {
         defaultValue={this.getDefaultValue()}
         fullWidth
         disabled={this.props.disabled}
-        floatingLabelText={this.props.label}
+        label={this.props.label}
         errorText={this.props.errorMessage}
         {...this.props.passProps}>
         {this.getOptions().map((item) => (

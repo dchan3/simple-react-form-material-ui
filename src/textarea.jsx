@@ -48,8 +48,8 @@ export default class TextareaComponent extends Component {
             fullWidth={true}
             multiline={true}
             value={this.state.value || ''}
-            floatinglabeltext={this.props.useHint ? null : this.props.label}
-            hinttext={this.props.useHint ? this.props.label : null}
+            label={this.props.useHint ? null : this.props.label}
+            placeholder={this.props.useHint ? this.props.label : null}
             errortext={this.props.errorMessage}
             disabled={this.props.disabled}
             onChange={this.onChange.bind(this)}
