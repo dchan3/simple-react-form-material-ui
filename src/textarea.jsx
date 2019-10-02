@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useRef } from 'react'
 import TextField from '@material-ui/core/TextField'
 import PropTypes from 'prop-types'
 import {FieldType} from 'simple-react-form'
@@ -12,52 +12,44 @@ const defaultProps = {
   changeOnKeyDown: false
 }
 
-export default class TextareaComponent extends Component {
-  constructor (props) {
-    super(props)
-    this.state = { value: props.value }
-  }
+export default function TextareaComponent(props) {
+  let [state, setState] = ({ value: props.value }), ref = useRef(null);
 
-  componentWillReceiveProps (nextProps) {
-    this.setState({ value: nextProps.value })
-  }
-
-  onKeyDown (event) {
+  function onKeyDown (event) {
     if (event.keyCode === 13) {
-      this.props.onChange(event.target.value)
+      props.onChange(event.target.value)
     }
   }
 
-  onBlur (event) {
-    if (this.props.onBlur) {
-      this.props.onBlur()
+  function onBlur (event) {
+    if (props.onBlur) {
+      props.onBlur()
     }
-    this.props.onChange(this.state.value)
+    props.onChange(state.value)
   }
 
-  onChange (event) {
-    this.setState({ value: event.target.value })
-    if (this.props.changeOnKeyDown) {
-      this.props.onChange(event.target.value)
+  function onChange (event) {
+    setState({ value: event.target.value })
+    if (props.changeOnKeyDown) {
+      props.onChange(event.target.value)
     }
   }
-  render () {
-    return (
-        <TextField
-            ref='input'
-            fullWidth={true}
-            multiline={true}
-            value={this.state.value || ''}
-            label={this.props.useHint ? null : this.props.label}
-            placeholder={this.props.useHint ? this.props.label : null}
-            errortext={this.props.errorMessage}
-            disabled={this.props.disabled}
-            onChange={this.onChange.bind(this)}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onBlur={this.onBlur.bind(this)}
-            {...this.props.passProps} />
-    )
-  }
+
+  return (
+      <TextField
+          ref={ref}
+          fullWidth={true}
+          multiline={true}
+          value={state.value || ''}
+          label={props.useHint ? null : props.label}
+          placeholder={props.useHint ? props.label : null}
+          errortext={props.errorMessage}
+          disabled={props.disabled}
+          onChange={onChange}
+          onKeyDown={onKeyDown}
+          onBlur={onBlur}
+          {...props.passProps} />
+  )
 }
 
 TextareaComponent.propTypes = propTypes

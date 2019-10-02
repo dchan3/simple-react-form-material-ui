@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import TextField from '@material-ui/core/TextField'
 import {FieldType} from 'simple-react-form'
@@ -12,85 +12,69 @@ const defaultProps = {
 
 }
 
-export default class TextFieldComponent extends Component {
+export default function TextFieldComponent(props) {
+  let [state, setState] = useState({ value: props.value }), ref = useRef(null);
 
-  constructor (props) {
-    super(props)
-    this.state = { value: props.value }
-  }
-
-  onKeyDown (event) {
+  function onKeyDown (event) {
     if (event.keyCode === 13) {
-      this.props.onChange(event.target.value)
+      props.onChange(event.target.value)
     }
   }
 
-  onBlur (event) {
-    if (this.props.onBlur) {
-      this.props.onBlur()
+  function onBlur (event) {
+    if (props.onBlur) {
+      props.onBlur()
     }
-    this.props.onChange(event.target.value)
+    props.onChange(event.target.value)
   }
 
-  isNumberType () {
-    if (this.props.fieldSchema) {
-      return this.props.fieldSchema.type === Number
+  function isNumberType () {
+    if (props.fieldSchema) {
+      return props.fieldSchema.type === Number
     }
-    if (this.props.fieldType === 'number') {
+    if (props.fieldType === 'number') {
       return true
     }
-    if (this.type === 'number') {
+    if (props.type === 'number') {
       return true
     }
     return false
   }
 
-  onChange (event, other) {
-    const value = this.isNumberType() ? Number(event.target.value) : event.target.value
-    this.props.onChange(value)
+  function onChange (event, other) {
+    const value = isNumberType() ? Number(event.target.value) : event.target.value
+    props.onChange(value)
   }
 
-  render () {
-    var fieldType = this.props.fieldType || this.type || 'text'
-    return (
-      <TextField
-        ref='input'
-        fullWidth
-        value={typeof this.props.value !== 'undefined' ? this.props.value : ''}
-        type={fieldType}
-        label={this.props.useHint ? null : this.props.label}
-        placeholder={this.props.useHint ? this.props.label : null}
-        errortext={this.props.errorMessage}
-        disabled={this.props.disabled}
-        onChange={this.onChange.bind(this)}
-        onKeyDown={this.onKeyDown.bind(this)}
-        onBlur={this.onBlur.bind(this)}
-        {...this.props.passProps}
-      />
-    )
-  }
+  var fieldType = props.fieldType || this.type || 'text'
+  return (
+    <TextField
+      ref={ref}
+      fullWidth
+      value={typeof props.value !== 'undefined' ? props.value : ''}
+      type={fieldType}
+      label={props.useHint ? null : props.label}
+      placeholder={props.useHint ? props.label : null}
+      errortext={props.errorMessage}
+      disabled={props.disabled}
+      onChange={onChange.bind(this)}
+      onKeyDown={onKeyDown.bind(this)}
+      onBlur={onBlur.bind(this)}
+      {...props.passProps}
+    />);
 }
 
 TextFieldComponent.propTypes = propTypes
 TextFieldComponent.defaultProps = defaultProps
 
-class StringFieldComponent extends TextFieldComponent {
-  constructor (props) {
-    super(props)
-    this.type = 'text'
-  }
+function StringFieldComponent(props) {
+  return <TextFieldComponent {...props} type="text" />
 }
 
-class NumberFieldComponent extends TextFieldComponent {
-  constructor (props) {
-    super(props)
-    this.type = 'number'
-  }
+function NumberFieldComponent(props) {
+  return <TextFieldComponent {...props} type="number" />
 }
 
-class DateFieldComponent extends TextFieldComponent {
-  constructor (props) {
-    super(props)
-    this.type = 'date'
-  }
+function DateFieldComponent(props) {
+  return <TextFieldComponent {...props} type="date" />;
 }
